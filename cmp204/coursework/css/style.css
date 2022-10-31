@@ -1,0 +1,38 @@
+#colOne{background-color:rgb(160, 190, 235);}
+
+#colTwo{background-color:rgb(71, 181, 255);}
+
+#colThree{background-color:rgb(37, 109, 133);}
+
+#panel, .flip{
+    padding: 5px;
+    text-align: center;
+    background-color: aqua;}
+    
+
+#panel{
+    padding: 5px;
+    display: none;}
+    
+
+
+
+body {
+    background-color: rgb(6, 40, 61);}
+
+h1  {color: aliceblue;}
+p	{color: aliceblue;}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;}
+a {
+    color: aliceblue;
+    display: block;
+    padding: 8px;
+    background-color: rgb(160, 190, 235);}
+
