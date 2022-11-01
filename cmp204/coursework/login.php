@@ -1,47 +1,48 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<title>CMP204 Unit Two Coursework Template</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/style.css">
-	<script src="javascript/script.js"></script>
+
+    <title>CMP204 Unit Two Coursework Template</title>
+    <?php include "includes/head.php" ?>
 </head>
+
 <body>
 
 
 
-<div class="container-fluid" >
+    <div class="container-fluid">
 
-    <h1>Header</h1>
+        <h1>Header</h1>
 
-    <div id="div_greet"></div>
-        
-    <div class="col-sm-2" id="colOne">
-        <nav>
-            <?php include_once "includes/links.php" ?>
-        </nav>	
+        <div id="div_greet"></div>
+
+        <div class="col-sm-2" id="flip">
+
+            <p>Navagation</p>
+            <nav>
+                <?php include_once "includes/links.php" ?>
+            </nav>
+
+        </div>
+
+        <div class="col-sm-6" id="colTwo">
+            <p>Para</p>
+        </div>
+
+        <div class="col-sm-4" id="colThree">
+            <p>Para</p>
+        </div>
+
     </div>
-
-    <div class="col-sm-6" id="colTwo">
-        <p>Para</p>		
-    </div>
-        
-    <div class="col-sm-4" id="colThree">
-        <p>Para</p> 
-    </div>
-
-</div>
 
     <h1>Login</h1>
-    
+
     <p>Form needed here to allow the user to login.</p>
 
 
-    <!--these scripts are necessary for Bootstrap and must be before the close body tag-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
 </body>
+
 </html>
