@@ -4,7 +4,7 @@
 
 #colThree{background-color:rgb(37, 109, 133);}
 
-#panel, .flip{
+#panel, #flip{
     padding: 5px;
     text-align: center;
     background-color: aqua;}

@@ -23,7 +23,6 @@ element.appendChild(para);
 }
 
 $(document).ready(function(){
-    alert("hello");
     $("#flip").hover(function(){
         $("#panel").slideToggle("show");
     });
