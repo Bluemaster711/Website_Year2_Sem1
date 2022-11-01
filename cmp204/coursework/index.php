@@ -24,7 +24,7 @@
 
 	<div id="div_greet"></div>
 			
-	<div class="col-sm-2" id="colOne">
+	<div class="col-sm-2" id="flip">
         <nav>
             <?php include_once "includes/links.php" ?>
         </nav>	
