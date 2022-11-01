@@ -20,14 +20,20 @@
 <div class="container-fluid" >
 
 
-	    <h1>Header</h1>
+	<h1>Header</h1>
 
 	<div id="div_greet"></div>
 			
-	<div class="col-sm-2" id="flip">
-        <nav>
-            <?php include_once "includes/links.php" ?>
-        </nav>	
+
+	<div class="col-sm-2" id="colOne">
+
+		<div id = "flip">
+			<p>Nav</p>
+        	<nav>
+            	<?php include_once "includes/links.php" ?>
+        	</nav>	
+		</div>
+
 	</div>
 
 	<div class="col-sm-6" id="colTwo">
