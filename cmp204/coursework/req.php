@@ -2,17 +2,11 @@
 
 <html lang="en">
 <head>
-	<title>CMP204 Unit Two Coursework Template</title>
+	<title>Hidden Requirements</title>
     <?php include "includes/head.php" ?>
 </head>
 <body>
-    <div id = "flip">
-		<p>Nav</p>
-    	<nav>
-        	<?php include_once "includes/links.php" ?>
-       	</nav>	
-	</div>
-    
+
     <h1>CMP204 Requirements Page - Unit 2 Assessment</h1>
     
     <p>If you have not met a requirement, do not delete it from the table.</p>

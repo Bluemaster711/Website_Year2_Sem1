@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>CMP204 Unit Two Coursework Template</title>
+    <title>Tour Information</title>
     <?php include "includes/head.php" ?>
 </head>
 

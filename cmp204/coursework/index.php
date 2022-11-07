@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>CMP204 Unit Two Music Website</title>
+	<title>Index</title>
 	<?php include "includes/head.php" ?>
 </head>
 

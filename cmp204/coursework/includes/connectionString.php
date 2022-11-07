@@ -1,15 +1,5 @@
 <?php
 
-/*
-	Desc: Example connection string
-	
-	Author: Lynsay A. Shepherd
-	
-	Date: November 2020
-	
-*/
-
-//connection details
 $servername = "lochnagar.abertay.ac.uk";
 $dbusername = "sqlXXXXXXX";
 $dbpassword = "password_here";

@@ -4,7 +4,7 @@
 
 <head>
 
-    <title>CMP204 Unit Two Coursework Template</title>
+    <title>Login</title>
     <?php include "includes/head.php" ?>
 </head>
 
