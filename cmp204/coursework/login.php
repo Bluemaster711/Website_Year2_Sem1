@@ -18,15 +18,18 @@
 
         <div id="div_greet"></div>
 
-        <div class="col-sm-2" id="flip">
 
-            <p>Navagation</p>
-            <nav>
-                <?php include_once "includes/links.php" ?>
-            </nav>
+            <div id=flip>
+                <p>Navagation</p>
+                <nav>
+                    <?php include_once "includes/links.php" ?>
+                </nav>
+            </div>
 
-        </div>
 
+        <div class="col-sm-2" id="colOne">
+		</div>
+        
         <div class="col-sm-6" id="colTwo">
             <p>Para</p>
         </div>
@@ -42,7 +45,7 @@
     <p>Form needed here to allow the user to login.</p>
 
 
-    
+
 </body>
 
 </html>

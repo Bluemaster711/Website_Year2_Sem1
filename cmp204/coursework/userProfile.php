@@ -15,16 +15,15 @@
 
         <div id="div_greet"></div>
 
-        <div class="col-sm-2" id="flip">
+            <div id=flip>
+                <p>Navagation</p>
+                <nav>
+                    <?php include_once "includes/links.php" ?>
+                </nav>
+            </div>
 
-
-            <p>Navagation</p>
-            <nav>
-                <?php include_once "includes/links.php" ?>
-            </nav>
-
-
-        </div>
+        <div class="col-sm-2" id="colOne">
+		</div>
 
         <div class="col-sm-6" id="colTwo">
             <p>Para</p>
@@ -39,7 +38,7 @@
     <h1>User Profile</h1>
 
 
-    
+
 </body>
 
 </html>
