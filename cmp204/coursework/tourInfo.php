@@ -31,7 +31,8 @@
         </div>
 
         <div class="col-sm-4" id="colThree">
-            <p>Para</p>
+            <button id = randbutton>Randomize</button>
+            <p id = randtext></p>
         </div>
 
     </div>
