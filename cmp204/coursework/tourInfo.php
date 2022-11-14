@@ -40,7 +40,11 @@
     <h1>Tour Information</h1>
     <p>Details of upcoming tour.</p>
 
+    <footer>
 
+<?php include "includes/footer.php"; ?>
+
+</footer>
 
 </body>
 

@@ -24,6 +24,17 @@
 
 
         <div class="col-sm-2" id="colOne">
+
+        <h1>Register</h1>
+
+        <form action="userProfile.php" method="post">
+        Name: <input type="text" name="name"><br />
+
+        Email: <input type="text" name="email"><br />
+
+        <input type="submit">
+
+
 		</div>
 
         <div class="col-sm-6" id="colTwo">
@@ -36,11 +47,12 @@
 
     </div>
 
-    <h1>Register</h1>
-    <p>Form needed here to capture registration details e.g., email address, username, password.</p>
-    <p>GDPR info can be on this page</p>
 
+<footer>
 
+    <?php include "includes/footer.php"; ?>
+
+</footer>
 
 </body>
 

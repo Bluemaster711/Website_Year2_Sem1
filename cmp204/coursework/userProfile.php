@@ -11,7 +11,7 @@
 
     <div class="container-fluid">
 
-        <h1>Header</h1>
+    <h1>User Profile</h1>
 
         <div id="div_greet"></div>
 
@@ -23,6 +23,11 @@
             </div>
 
         <div class="col-sm-2" id="colOne">
+
+            <p>Welcome <?php echo $_POST["name"]; ?></p>    
+
+            <p>Your email address is: <?php echo $_POST["email"]; ?></p>
+
 		</div>
 
         <div class="col-sm-6" id="colTwo">
@@ -35,9 +40,12 @@
 
     </div>
 
-    <h1>User Profile</h1>
 
+<footer>
 
+    <?php include "includes/footer.php"; ?>
+
+</footer>
 
 </body>
 

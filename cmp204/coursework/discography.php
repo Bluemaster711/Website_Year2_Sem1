@@ -39,7 +39,11 @@
     <h1>Discography</h1>
     <p>Discography</p>
 
+<footer>
 
+<?php include "includes/footer.php"; ?>
+
+</footer>
   
 </body>
 

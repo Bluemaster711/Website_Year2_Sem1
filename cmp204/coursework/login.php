@@ -28,6 +28,17 @@
 
 
         <div class="col-sm-2" id="colOne">
+
+        
+        <h1>Login</h1>
+
+        <form action="userProfile.php" method="post">
+        Name: <input type="text" name="name"><br />
+
+        Email: <input type="text" name="email"><br />
+
+        <input type="submit">
+
 		</div>
         
         <div class="col-sm-6" id="colTwo">
@@ -40,11 +51,11 @@
 
     </div>
 
-    <h1>Login</h1>
+<footer>
 
-    <p>Form needed here to allow the user to login.</p>
+<?php include "includes/footer.php"; ?>
 
-
+</footer>
 
 </body>
 
