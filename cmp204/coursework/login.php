@@ -30,16 +30,18 @@
         <div class="col-sm-2" id="colOne">
 
         
-        <h1>Login</h1>
+            <h1>Login</h1>
 
-        <form action="userProfile.php" method="post">
-        Name: <input type="text" name="name"><br />
+            <form action="userProfile.php" method="post">
+            <label for="uname"><b><Password></b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required><br />
 
-        Email: <input type="text" name="email"><br />
+            <label for="psw"><b><Password></b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required><br />
 
-        <input type="submit">
+            <input type="submit">
 
-		</div>
+	    </div>
         
         <div class="col-sm-6" id="colTwo">
             <p>Para</p>

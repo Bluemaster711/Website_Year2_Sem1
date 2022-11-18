@@ -28,9 +28,9 @@
         <h1>Register</h1>
 
         <form action="userProfile.php" method="post">
-        Name: <input type="text" name="name"><br />
+        Username: <input type="text" name="username"><br />
 
-        Email: <input type="text" name="email"><br />
+        Password: <input type="text" name="password"><br />
 
         <input type="submit">
 

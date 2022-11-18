@@ -24,9 +24,8 @@
 
         <div class="col-sm-2" id="colOne">
 
-            <p>Welcome <?php echo $_POST["name"]; ?></p>    
+            <p>Welcome <?php echo $_POST["username"]; ?></p>    
 
-            <p>Your email address is: <?php echo $_POST["email"]; ?></p>
 
 		</div>
 
@@ -39,6 +38,9 @@
         </div>
 
     </div>
+
+
+    
 
 
 <footer>

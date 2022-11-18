@@ -1,3 +1,8 @@
+
+<link rel="connection" href="includes/connectionString.php">
+<?php include "includes/head.php" ?>
+<?php include "includes/php_function.php" ?>;
+
 <?php
 
     //SQL query to insert user to database

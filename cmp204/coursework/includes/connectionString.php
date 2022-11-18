@@ -6,8 +6,14 @@ $dbpassword = "password_here";
 $dbname = "sqlXXXXXXX";
 
 
-$conn = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
+$enterMatrix = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
 
-mysqli_close($conn);
+//failed
+if (!$enterMatrix){
+    die("You were not able to connect: " . mysqli_connect_errno());
+}
+
+
+mysqli_close($enterMartix);
 
 ?>

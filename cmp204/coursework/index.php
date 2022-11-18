@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 
+<?php include "includes/error.php" ?>
+
 <head>
 	<title>Index</title>
 	<?php include "includes/head.php" ?>
@@ -43,7 +45,7 @@
 
 <footer>
 
-<?php include "includes/footer.php"; ?>
+<?php include "includes/footer.php" ?>
 
 </footer>
 </body>
