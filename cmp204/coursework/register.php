@@ -27,7 +27,7 @@
 
         <h1>Register</h1>
 
-        <form action="userProfile.php" method="post">
+        <form action="processRegistration.php" method="post">
         Username: <input type="text" name="username"><br />
 
         Password: <input type="text" name="password"><br />
