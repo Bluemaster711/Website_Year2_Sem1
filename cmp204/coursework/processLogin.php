@@ -10,8 +10,7 @@
 
         echo "Database connected";
     
-        $selectunameDB = "SELECT Username FROM Account_Info";
-        $selectpwsDB = "SELECT Password FROM Account_Info";
+        $selectDB = "SELECT Username and Password FROM Account_Info";
 
         $result = mysqli_query($enterMatrix , $selectDB);
 
@@ -21,16 +20,19 @@
 
         if (mysqli_num_rows($result) > 0) {
 
-            if($uname == mysqli_query($enterMartix, $selectunameDB) && $pws == mysqli_query($enterMartix, $selectpwsDB)){
+            if(($result['Username'] == $uname) && ($uname !="") && ($result['Password'] == $pwd) && ($pwd !=""));
 
                 echo "Correct, lets log you in";
+                header("location: userProfile.php");
                 //redirect to login
 
             }
+        
 
-        }else{
+        else{
 
             echo "Unknown Credentials";
+            header("location: index.php");
 
         };
 

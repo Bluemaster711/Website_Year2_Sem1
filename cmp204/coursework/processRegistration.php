@@ -27,11 +27,14 @@
 
          if (mysqli_query($enterMatrix, $insetDB)) {
 
-             echo "New account Created Successfully";
+            echo "New account Created Successfully";
+            header("location: userProfile.php");
+            
 
          }else{
 
-             echo "Error: Something";
+             echo "Error: failed registration";
+             header("location: index.php");
          };
 
     }
