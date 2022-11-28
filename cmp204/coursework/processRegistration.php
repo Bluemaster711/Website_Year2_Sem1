@@ -13,46 +13,43 @@ $dbname = "sql2203162";
 
 $enterMatrix = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
 
- if (!$enterMatrix){
+    if (!$enterMatrix){
 
-     die("You were not able to connect: " . mysqli_connect_errno());
-
- }else{
-
-     echo "Database connected";
-
-    $selectDB = "SELECT Username FROM Account_Info";
-
-    $resultDB = mysqli_query($enterMartix, $selectDB);
-
-    if(mysqli_num_rows($resultDB)>0){
-
-        echo "Try Again";
+        die("You were not able to connect: " . mysqli_connect_errno());
 
     }else{
 
-        $insertDB = "INSERT INTO Account_Info (Username, Password); VALUES ('$_POST[username]', '$_POST[password]')";
+        echo "Database connected";
 
-         if (mysqli_query($enterMatrix, $insetDB)) {
+        $selectDB = "SELECT Username FROM Account_Info";
 
-            echo "New account Created Successfully";
-            header("location: userProfile.php");
+        $resultDB = mysqli_query($enterMartix, $selectDB);
+
+        if(mysqli_num_rows($resultDB)>0){
+
+            echo "Try Again";
+
+        }else{
+
+            $insertDB = "INSERT INTO Account_Info (Username, Password); VALUES ('$_POST[username]', '$_POST[password]')";
+
+            if (mysqli_query($enterMatrix, $insetDB)) {
+
+                echo "New account Created Successfully";
+                header("location: userProfile.php");
             
 
-         }else{
+            }else{
 
-             echo "Error: failed registration";
-             header("location: index.php");
-         };
+                echo "Error: failed registration";
+                header("location: index.php");
+            };
 
+        }
+
+    mysqli_close($enterMartix);
+    
     }
 
-
-
-
- }
-
-
-mysqli_close($enterMartix);
 
 ?>

@@ -24,8 +24,7 @@
 
         <div class="col-sm-2" id="colOne">
 
-            <p>Welcome <?php echo $_POST["username"]; ?></p>    
-
+            <p>Welcome </p>
 
 		</div>
 

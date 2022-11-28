@@ -35,18 +35,13 @@
                 <h1>Login</h1>
 
                 <form action="processLogin.php" method="post">
-                <label for="uname">
-                    <i class = "login-user"></i>
-                </label>
+
                 <input type="text" placeholder="Enter Username" name="username" id="username" required><br />
 
-                <label for="psw">
-                    <i class = "login-psw"></i>
-                </label>
                 <input type="password" placeholder="Enter Password" name="password" id ="password" required><br />
 
                 <input type="submit" value="login">
-
+                
                 </form>
 
             </div>

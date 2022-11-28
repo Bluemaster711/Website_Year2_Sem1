@@ -43,7 +43,8 @@ $enterMatrix = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
 
         mysqli_stmt_execute($stmt);
 
-        mysqli_stmt_store_result($stmt);
+        $results = mysqli_stmt_get_result($stmt);
+        $Password = mysqli_fetch_assoc($results);
        
         if($Password == $param_password){
             echo "well done";
@@ -52,10 +53,11 @@ $enterMatrix = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
             echo "Wrong";
             header("location index.php");
         }
+
+        mysqli_stmt_close($stmt);
+        mysqli_close($enterMartix);
     }
 
-    mysqli_stmt_close($stmt);
-    mysqli_close($enterMartix);
     
 
 ?>
