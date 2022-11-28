@@ -29,17 +29,27 @@
 
         <div class="col-sm-2" id="colOne">
 
+            <div class="login">
+
         
-            <h1>Login</h1>
+                <h1>Login</h1>
 
-            <form action="processLogin.php" method="post">
-            <label for="uname"><b><Password></b></label>
-            <input type="text" placeholder="Enter Username" name="username" required><br />
+                <form action="processLogin.php" method="post">
+                <label for="uname">
+                    <i class = "login-user"></i>
+                </label>
+                <input type="text" placeholder="Enter Username" name="username" id="username" required><br />
 
-            <label for="psw"><b><Password></b></label>
-            <input type="password" placeholder="Enter Password" name="password" required><br />
+                <label for="psw">
+                    <i class = "login-psw"></i>
+                </label>
+                <input type="password" placeholder="Enter Password" name="password" id ="password" required><br />
 
-            <input type="submit">
+                <input type="submit" value="login">
+
+                </form>
+
+            </div>
 
 	    </div>
         
