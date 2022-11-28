@@ -2,7 +2,7 @@
 
 $servername = "lochnagar.abertay.ac.uk";
 $dbusername = "sql2203162";
-$dbpassword = "FHA4qFXCpnU4";
+$dbpassword = "D8EP4e95ukDq";
 $dbname = "sql2203162";
 
 
