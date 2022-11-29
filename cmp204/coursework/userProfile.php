@@ -24,7 +24,7 @@
 
         <div class="col-sm-2" id="colOne">
 
-            <p>Welcome </p>
+            <p>Welcome <?php if(isset($_SESSION["username"])) { echo $_SESSION["username"]; } else { echo "very important person"; } ?></p>
 
 		</div>
 

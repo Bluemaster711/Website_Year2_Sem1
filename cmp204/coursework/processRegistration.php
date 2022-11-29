@@ -1,17 +1,8 @@
-
-<?php //"includes/connectionString.php"?>
-
+<?php include "includes/connectionString.php"?>
+<?php include "includes/error.php"?>
 
 
 <?php
-
-$servername = "lochnagar.abertay.ac.uk";
-$dbusername = "sql2203162";
-$dbpassword = "D8EP4e95ukDq";
-$dbname = "sql2203162";
-
-
-$enterMatrix = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
 
     if (!$enterMatrix){
 
@@ -19,37 +10,33 @@ $enterMatrix = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
 
     }else{
 
-        echo "Database connected";
+        if ( !isset($_POST['username'], $_POST['password']) ) {
+        die("Fill in both feilds NOW");}
 
-        $selectDB = "SELECT Username FROM Account_Info";
+        $stmt = $enterMatrix->prepare('SELECT Username FROM Account_Info WHERE Username = ?');
+        $stmt->bind_param("s", $_POST["username"]);
+        $stmt->execute();
 
-        $resultDB = mysqli_query($enterMartix, $selectDB);
+        $stmt_result = $stmt->get_result();
 
-        if(mysqli_num_rows($resultDB)>0){
-
-            echo "Try Again";
-
+        if($stmt_result->num_rows>0){
+            die("Username unavalible");
         }else{
 
-            $insertDB = "INSERT INTO Account_Info (Username, Password); VALUES ('$_POST[username]', '$_POST[password]')";
+            $stmt_insert = $enterMatrix->prepare("INSERT INTO Account_Info(Username, Password) VALUES (?, ?)");
+            $stmt_insert->bind_param("ss", $_POST["username"], $_POST["password"]);
+            $stmt_insert->execute();
 
-            if (mysqli_query($enterMatrix, $insetDB)) {
+            session_start();
+            //header("location userProfile.php");
+            $_SESSION["username"] = $_POST["username"];
+            header("Location: userProfile.php", true, 301);
+        
 
-                echo "New account Created Successfully";
-                header("location: userProfile.php");
-            
-
-            }else{
-
-                echo "Error: failed registration";
-                header("location: index.php");
-            };
-
+            mysqli_stmt_close($stmt_insert);
+            mysqli_close($enterMatrix);
         }
 
-    mysqli_close($enterMartix);
-    
     }
-
 
 ?>

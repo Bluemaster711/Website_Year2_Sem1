@@ -1,14 +1,8 @@
-<?php //"includes/connectionString.php"?>
+<?php include "includes/connectionString.php"?>
+<?php include "includes/error.php"?>
+
 
 <?php
-
-$servername = "lochnagar.abertay.ac.uk";
-$dbusername = "sql2203162";
-$dbpassword = "D8EP4e95ukDq";
-$dbname = "sql2203162";
-
-
-$enterMatrix = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
 
 
     if (!$enterMatrix){
@@ -17,47 +11,37 @@ $enterMatrix = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
 
     }else{
 
-        echo "Database connected";
+        if ( !isset($_POST['username'], $_POST['password']) ) {
+	    die("Fill in both feilds NOW");}
 
-        // $selectDB = "SELECT Username and Password FROM Account_Info";
-        // $result = mysqli_query($enterMatrix , $selectDB);
-        // $uname = $_POST['username'];
-        // $pws = $_POST['password'];
-        // if (mysqli_num_rows($result) > 0) {
-        //     if(($result['Username'] == $uname) && ($uname !="") && ($result['Password'] == $pwd) && ($pwd !=""));
-        //         echo "Correct, lets log you in";
-        //         header("location: userProfile.php");
-        //         //redirect to login
-        //     }
-        // else{
-        //     echo "Unknown Credentials";
-        //     header("location: index.php")
-        // };
-
-        $stmt = mysqli_prepare($enterMartix, "SELECT Username, Password FROM Account_Info WHERE Username = ?");
-
-
-        mysqli_stmt_bind_param($stmt, "s", $param_password);
-
-        $param_password = trim($_POST["password"]);
-
-        mysqli_stmt_execute($stmt);
-
-        $results = mysqli_stmt_get_result($stmt);
-        $Password = mysqli_fetch_assoc($results);
-       
-        if($Password == $param_password){
-            echo "well done";
-            header("location userProfile.php");
-        }else{
-            echo "Wrong";
-            header("location index.php");
+        if ($stmt = $enterMatrix->prepare('SELECT Username, Password FROM Account_Info WHERE Username = ?')) {
+    	$stmt->bind_param('s', $_POST['username']);
+	    $stmt->execute();
+    
+	    $stmt->store_result();
+        
+        if ($stmt->num_rows > 0) {
+            $stmt->bind_result($Username, $Password);
+            $stmt->fetch();
+            // Account is real
+            if ($_POST['password'] === $Password) {
+                session_start();
+                //header("location userProfile.php");
+                $_SESSION["username"] = $_POST["username"];
+                header("Location: userProfile.php", true, 301);
+            } else {
+                // Incorrect password
+                echo 'Incorrect username and/or password!';
+            }
+        } else {
+            // Incorrect username
+            echo 'Incorrect username and/or password!';
         }
 
-        mysqli_stmt_close($stmt);
-        mysqli_close($enterMartix);
-    }
 
-    
+        mysqli_stmt_close($stmt);
+        mysqli_close($enterMatrix);
+    }
+    }
 
 ?>

@@ -24,7 +24,7 @@
 			<div id=flip>
 				<p>Navagation</p>
 				<nav>
-					<?php include_once "includes/links.php" ?>
+					<?php include "includes/links.php" ?>
 				</nav>
 			</div>
 
