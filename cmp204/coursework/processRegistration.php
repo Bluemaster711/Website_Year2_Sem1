@@ -24,7 +24,9 @@
         }else{
 
             $stmt_insert = $enterMatrix->prepare("INSERT INTO Account_Info(Username, Password) VALUES (?, ?)");
-            $stmt_insert->bind_param("ss", $_POST["username"], $_POST["password"]);
+
+            $hashToStoreInDb = password_hash($_POST['password'], PASSWORD_DEFAULT);
+            $stmt_insert->bind_param("ss", $_POST["username"], $hashToStoreInDb);
             $stmt_insert->execute();
 
             session_start();

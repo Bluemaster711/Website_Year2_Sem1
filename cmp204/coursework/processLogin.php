@@ -24,18 +24,23 @@
             $stmt->bind_result($Username, $Password);
             $stmt->fetch();
             // Account is real
-            if ($_POST['password'] === $Password) {
+          
+
+            $password = $_POST["password"];
+            if(password_verify($password, $Password)) 
+            {
                 session_start();
                 //header("location userProfile.php");
                 $_SESSION["username"] = $_POST["username"];
                 header("Location: userProfile.php", true, 301);
+    
             } else {
                 // Incorrect password
-                echo 'Incorrect username and/or password!';
+                echo 'Incorrect username and/or password! Pass';
             }
         } else {
             // Incorrect username
-            echo 'Incorrect username and/or password!';
+            echo 'Incorrect username and/or password! User';
         }
 
 
