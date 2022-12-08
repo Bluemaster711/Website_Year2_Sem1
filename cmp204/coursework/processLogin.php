@@ -33,14 +33,15 @@
                 //header("location userProfile.php");
                 $_SESSION["username"] = $_POST["username"];
                 header("Location: userProfile.php", true, 301);
+                //echo $_SESSION['username'];
     
             } else {
                 // Incorrect password
-                echo 'Incorrect username and/or password! Pass';
+                echo 'Incorrect username and/or password!';
             }
         } else {
             // Incorrect username
-            echo 'Incorrect username and/or password! User';
+            echo 'Incorrect username and/or password!';
         }
 
 

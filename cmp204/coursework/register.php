@@ -16,9 +16,16 @@
         <div id="div_greet"></div>
 
             <div id=flip>
-                <p>Navagation</p>
+                <p id=navtext>Navagation</p>
                 <nav>
-                    <?php include_once "includes/links.php" ?>
+                <?php
+					session_start();
+					if(isset($_SESSION["username"])){
+						include "includes/linksIn.php";
+					}else{
+						include "includes/linksOut.php";
+					}
+					?>
                 </nav>
             </div>
 
@@ -28,7 +35,6 @@
             
             <div class="register">
 
-        
                 <h1>Register</h1>
 
                 <form action="processRegistration.php" method="post">

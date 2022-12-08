@@ -1,127 +1,97 @@
-#colOne{background-color:rgb(lightgray);}
+#colOne
+{
+    background-color:rgb(0, 63, 105);
+    text-align: left;
+}
+#colTwo{background-color:rgb(0, 153, 255);}
 
-#colTwo{background-color:rgb(71, 181, 255);}
+#colThree{background-color:rgb(131, 202, 250);}
 
-#colThree{background-color:rgb(37, 109, 133);}
+#navtext{
+        color: white;
+}
 
-#flip{
+#flip a{
+    color: white;
+}
+
+#flip {
     padding: 10px;
     margin: 5px;
     width: 100%;
     text-align: center;
-    background-color: lightgray;
+    background-color: midnightblue;
+    margin-bottom: 0;
+    border-radius: 0;
 }
     
 #panel{
-    width: 125%;
+    width: 100%;
     text-align: center;
-    background-color: lightgray;
-
-
     display: none;
-    position: absolute;
-    z-index: 1000;
+    position: center;
+    z-index: 100;
+    background-color: rgba(20, 39, 54, 0.836);
+    
 }
 
-/* #flip:hover #panel{
-    display: block;
-    position: absolute;
-    z-index: 1000;
-    width: 100%;}
-*/
-
-
 body {
-    background-color: rgb(0,0,0);}
+    background-color: black;
+}
 
-h1  {color: aliceblue;}
-p	{color: aliceblue;
-     position: center;
-     margin: 10px;}
-
-
-
-ul {
+h1, h2, h3  
+{
+    color: aliceblue;
+    position: left;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+p	
+{
+        color: aliceblue;
+        position: left;
+        margin: 10px;
+}
+ ul 
+ {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;}
-a {
+    overflow: hidden; 
+}
+a 
+{
     color: aliceblue;
     display: block;
     padding: 8px;
-    background-color: rgb(160, 190, 235);}
-
-
-
-
-
-/* .login, .register {
-        width: 400px;
-        background-color: #ffffff;
-        box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
-        margin: 100px auto;}
-.login, .register h1 {
-        text-align: center;
-        color: #5b6574;
-        font-size: 24px;
-        padding: 20px 0 20px 0;
-        border-bottom: 1px solid #dee0e4;}
-.login, .register form {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-top: 20px;}
-.login, .register form label {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        background-color: #3274d6;
-        color: #ffffff;}
-.login, .register h1 {
-        text-align: center;
-        color: #5b6574;
-        font-size: 24px;
-        padding: 20px 0 20px 0;
-        border-bottom: 1px solid #dee0e4;
+    background-color: midnightblue;
 }
-.login, .register form {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-top: 20px;
+
+
+
+.sidenav 
+{
+        background-color: #f1f1f1;
+        height: 25%;
 }
-.login, .register form label {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        background-color: #3274d6;
-        color: #ffffff;
+
+
+.row{
+    padding: 0px;
+    margin: 5px;
 }
-.login, .register form input[type="password"], .login form input[type="text"] {
-        width: 310px;
-        height: 50px;
-        border: 1px solid #dee0e4;
-        margin-bottom: 20px;
-        padding: 0 15px;
-}
-.login, .register form input[type="submit"] {
-        width: 100%;
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
         padding: 15px;
-        margin-top: 20px;
-        background-color: #3274d6;
-        border: 0;
-        cursor: pointer;
-        font-weight: bold;
-        color: #ffffff;
-        transition: background-color 0.2s;
-}
-.login, .register form input[type="submit"]:hover {
-        background-color: #2868c7;
-        transition: background-color 0.2s;
-}
- */
+      }
+
+      .row.content {height:auto;} 
+    }
+
+

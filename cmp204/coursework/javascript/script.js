@@ -5,9 +5,9 @@ const d = new Date()
 var hour = d.getHours()
 
 if (hour < 12) {
-    greeting = "Good Morning";}
+    greeting = "Good Morning\n";}
 else{
-    greeting = "Good Afternoon";}
+    greeting = "Good Afternoon\n";}
 
 var para = document.createElement("p");
 var node = document.createTextNode(greeting);
@@ -23,6 +23,15 @@ $(document).ready(function(){
         $("#panel").slideToggle("show");
     });
 });
+
+//nav glows when hovered over 
+$(document).ready(function(){
+    $("#flip, a").hover(function(){
+      $(this).css("color", "red");
+      }, function(){
+      $(this).css("color", "white");
+    });
+  });
 
 
 

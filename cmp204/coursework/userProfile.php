@@ -9,43 +9,134 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div id=flip>
+        <p id=navtext>Navagation</p>
+        <nav>
+            <?php
+				session_start();
+				if(isset($_SESSION["username"])){
+					include "includes/linksIn.php";
+				}else{
+					include "includes/linksOut.php";
+				}
+			?>
+        </nav>
+    </div>
 
-    <h1>User Profile</h1>
+    <div class="container">
 
-        <div id="div_greet"></div>
+        <div class="row" id="colOne">
+            <div class="col-12 col-md-8">
 
-            <div id=flip>
-                <p>Navagation</p>
-                <nav>
-                    <?php include_once "includes/links.php" ?>
-                </nav>
+                <h1>User Profile</h1>
+                <div id="div_greet"></div>
+                <?php
+                session_start(); 
+                ?>
+                <p>Welcome <?php if(isset($_SESSION["username"])) { echo $_SESSION["username"]; } else { echo "your stupid"; } ?></p>
+
             </div>
 
-        <div class="col-sm-2" id="colOne">
+            <div class="col-6 col-md-4">
 
-            <p>Welcome <?php if(isset($_SESSION["username"])) { echo $_SESSION["username"]; } else { echo "very important person"; } ?></p>
+                <div class="well">
+                    <p><a href="#">Link</a></p>
+                </div>
 
-		</div>
+                <div class="well">
+                    <p><a href="#">Link</a></p>
+                </div>
 
-        <div class="col-sm-6" id="colTwo">
-            <p>Para</p>
+                <div class="well">
+                    <p><a href="#">Link</a></p>
+                </div>
+
+            </div>
+        
         </div>
 
-        <div class="col-sm-4" id="colThree">
-            <p>Para</p>
+
+        <div class="row" id="colTwo">
+            <div class="col-6 col-md-4">
+                <p>photo</p>
+            </div>
+    
+            <div class="col-6 col-md-4">
+                <p>photo</p>
+            </div>
+
+            <div class="col-6 col-md-4">
+                <p>photo</p>
+            </div>
+        </div>
+        <div class="row" id="colTwo">
+            <div class="col-6 col-md-4">
+                <p>photo</p>
+            </div>
+    
+            <div class="col-6 col-md-4">
+                <p>photo</p>
+            </div>
+
+            <div class="col-6 col-md-4">
+                <p>photo</p>
+            </div>
+        </div>
+        <div class="row" id="colTwo">
+            <div class="col-6 col-md-4">
+                <p>photo</p>
+            </div>
+    
+            <div class="col-6 col-md-4">
+                <p>photo</p>
+            </div>
+
+            <div class="col-6 col-md-4">
+                <p>photo</p>
+            </div>
+        </div>
+
+
+
+        <div class="row" id="colThree">
+
+            <div class="col-6">
+
+                <p>Change password</p>
+                <form action="changePassword.php" method="post">
+
+                    <input type="password" placeholder="Enter old password" name="password" required><br />
+                    <input type="password" placeholder="Enter new password" name="newpassword"  required><br />
+
+                    <input type="submit" value="change password">
+
+                </form>
+
+            </div>
+
+            <div class="col-6">
+
+                <p>info</p>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+
+            <div class="col-12">
+
+                <?php include "includes/footer.php" ?>
+
+            </div>
+
+
         </div>
 
     </div>
 
-
-    
-
-
 <footer>
-
-    <?php include "includes/footer.php"; ?>
-
 </footer>
 
 </body>
