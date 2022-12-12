@@ -15,7 +15,9 @@
 		<p id=navtext>Navagation</p>
 		<nav>
 				<?php
-					session_start();
+					if(isset($_COOKIE["PHPSESSID"])) {
+						session_start();
+					}
 					if(isset($_SESSION["username"])){
 						include "includes/linksIn.php";
 					}else{
@@ -41,7 +43,7 @@
 			<div class="col-6 col-md-4">
 
 				<div class="well">
-				<p><a href="#">Link</a></p>
+					<p><a href="#">Link</a></p>
 				</div>
 
 				<div class="well">
@@ -108,7 +110,6 @@
 		</div>
 
 	</div>
-
 
 </body>
 

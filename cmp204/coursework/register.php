@@ -9,63 +9,123 @@
 </head>
 
 <body>
-    <div class="container-fluid">
 
-        <h1>Header</h1>
 
-        <div id="div_greet"></div>
 
-            <div id=flip>
-                <p id=navtext>Navagation</p>
-                <nav>
-                <?php
-					session_start();
+<div id=flip>
+        <p id=navtext>Navagation</p>
+        <nav>
+            <?php
+				   if(isset($_COOKIE["PHPSESSID"])) {
+                    session_start();
+                    }
 					if(isset($_SESSION["username"])){
 						include "includes/linksIn.php";
 					}else{
 						include "includes/linksOut.php";
 					}
-					?>
-                </nav>
-            </div>
+			?>
+        </nav>
+    </div>
 
 
-        <div class="col-sm-2" id="colOne">
 
-            
-            <div class="register">
 
-                <h1>Register</h1>
+<div class="container">
 
-                <form action="processRegistration.php" method="post">
-    
-                <input type="text" placeholder="Enter Username" name="username" id="username" required><br />
+    <div class="row" id="colOne">
+        <div class="col-12 col-md-8">
 
-                <input type="password" placeholder="Enter Password" name="password" id ="password" required><br />
-
-                <input type="submit" value="register">
-
-                </form>
-
-            </div>
-
-		</div>
-
-        <div class="col-sm-6" id="colTwo">
-            <p>Para</p>
+                    <h1>Welcome to Bastile's Fan Page!!</h1>
+                    <p>Please fill out the forum below</p>
+                    <p>Don't forget to accept our T and C's</p>
+                    
         </div>
 
-        <div class="col-sm-4" id="colThree">
-            <p>Para</p>
+        <div class="col-6 col-md-4">
+
+
+
+        </div>
+    </div>
+
+
+    <div class="row" id="colTwo">
+        <div class="col-6 col-md-4">
+
+           
+
+        </div>
+    
+        <div class="col-6 col-md-4">
+
+            <div class="register">
+
+                <h1 id="h1-black">Register</h1>
+
+                    <form action="processRegistration.php" method="post" class="form-center">
+            
+                        <input type="text" placeholder="Enter Username" name="username" id="username" required><br />
+
+                        <input type="password" placeholder="Enter Password" name="password" id ="password" required><br />
+
+                        <input type="checkbox" id="TandC" name="TandC" value="TandC">
+                        <label for="TandC"> I accept the T's and C's</label>
+                        <p>click <a href="TandC.php">HERE</a> to see our term and conditions</p><br>  
+                        
+                        <input type="submit" value="register" id="submitColour">
+
+
+                    </form>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="col-6 col-md-4">
+
+           
+
+        </div>
+
+    </div>  
+
+
+
+    <div class="row" id="colThree">
+
+
+        <div class="col-6">
+
+            <p>info</p>
+
+        </div>
+
+        <div class="col-6">
+
+            <p>info</p>
+
         </div>
 
     </div>
 
+    <div class="row">
+
+
+        <div class="col-12">
+
+            <?php include "includes/footer.php" ?>
+
+        </div>
+
+
+    </div>
+
+</div>
 
 <footer>
-
-    <?php include "includes/footer.php"; ?>
-
 </footer>
 
 </body>

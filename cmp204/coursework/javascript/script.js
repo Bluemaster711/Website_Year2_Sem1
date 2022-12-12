@@ -6,8 +6,13 @@ var hour = d.getHours()
 
 if (hour < 12) {
     greeting = "Good Morning\n";}
-else{
+else if(hour > 12 && hour < 18){
     greeting = "Good Afternoon\n";}
+else if(hour == 0){
+  greetin = "It is past your bedtime"
+}else{
+  greeting = "Good Evening"
+}
 
 var para = document.createElement("p");
 var node = document.createTextNode(greeting);
@@ -29,7 +34,7 @@ $(document).ready(function(){
     $("#flip, a").hover(function(){
       $(this).css("color", "red");
       }, function(){
-      $(this).css("color", "white");
+      $(this).css("color", "blue");
     });
   });
 

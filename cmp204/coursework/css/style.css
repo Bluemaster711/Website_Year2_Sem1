@@ -1,18 +1,27 @@
 #colOne
 {
-    background-color:rgb(0, 63, 105);
+    background-color:black;
     text-align: left;
+    color: white;
+}
+#colOne p{color: #2272FF;}
+#colOne h1
+{
+    color: #2272FF;
+    font-family: "Lucida Console", Monaco, monospace;
 }
 #colTwo{background-color:rgb(0, 153, 255);}
+#colTwoo{background-color:rgb(0, 153, 255);}
 
-#colThree{background-color:rgb(131, 202, 250);}
+#colThree{background-color:black;}
+#colThree p{color: #2272FF;}
 
 #navtext{
-        color: white;
+        color: #2272FF;
 }
 
 #flip a{
-    color: white;
+    color: blue;
 }
 
 #flip {
@@ -20,7 +29,7 @@
     margin: 5px;
     width: 100%;
     text-align: center;
-    background-color: midnightblue;
+    background-color: black;
     margin-bottom: 0;
     border-radius: 0;
 }
@@ -31,23 +40,70 @@
     display: none;
     position: center;
     z-index: 100;
-    background-color: rgba(20, 39, 54, 0.836);
+    color: #2272FF;
     
 }
 
 body {
-    background-color: black;
+    background-color: darkgray;
 }
 
+.register .login{
+    background-color: rgb(149, 215, 241);
+    position: center;
+    text-align: center;
+}
+
+#h1-black{
+    color: black;
+    text-align: center;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+B{
+    color: red;
+}
+
+input{
+    padding: 5px;
+    margin: 5px;
+
+}
+button{
+    color: blue;
+    padding: 5px;
+    margin: 5px;
+}
+#submitColour{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.form-center{
+    position: center;
+    text-align: center;
+    padding: 5px;
+}
 h1, h2, h3  
 {
     color: aliceblue;
     position: left;
     font-family: "Lucida Console", Monaco, monospace;
 }
+
+.logo{
+    height: 75%;
+    max-width: 75%;
+    padding-top: 25px;
+}
+.bluetxt{
+    color: blue;
+
+}
+
+
+
 p	
 {
-        color: aliceblue;
+        color: black;
         position: left;
         margin: 10px;
 }
@@ -58,13 +114,27 @@ p
     padding: 0;
     overflow: hidden; 
 }
-a 
+#panel a 
 {
-    color: aliceblue;
+    color: #2272FF;
     display: block;
     padding: 8px;
-    background-color: midnightblue;
+    background-color: darkgray;
 }
+.register a{
+    color: black;
+    display: flexbox;
+    padding: 0px;
+    background-color: darkgray;
+}
+.well a {
+    color: #2272FF;
+    display: block;
+    padding: 8px;
+    background-color: darkgray;
+}
+
+
 
 
 
@@ -93,5 +163,11 @@ a
 
       .row.content {height:auto;} 
     }
+
+
+
+
+
+
 
 

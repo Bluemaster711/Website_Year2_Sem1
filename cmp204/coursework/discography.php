@@ -13,7 +13,9 @@
 			<p id=navtext>Navagation</p>
 			<nav>
                 <?php
-				session_start();
+				if(isset($_COOKIE["PHPSESSID"])) {
+					session_start();
+				}
 				if(isset($_SESSION["username"])){
 					include "includes/linksIn.php";
 				}else{
@@ -52,28 +54,33 @@
 			</div>
 		</div>
 
-
 		<div class="row" id="colTwo">
-			<div class="col-6 col-md-4">
+            <div class="col-6 col-md-4">
+                <p>Song 1</p>
+            </div>
+    
+            <div class="col-6 col-md-4">
+                <p>Song 2</p>
+            </div>
 
-				<p>info</p>
+            <div class="col-6 col-md-4">
+                <p>Song 3</p>
+            </div>
+        </div>
+        <div class="row" id="colTwo">
+            <div class="col-6 col-md-4">
+                <p>Song 4</p>
+            </div>
+    
+            <div class="col-6 col-md-4">
+                <p>Song 5</p>
+            </div>
 
-			</div>
-			
-			<div class="col-6 col-md-4">
-
-				<p>info</p>
-			
-			</div>
-
-			<div class="col-6 col-md-4">
-
-				<p>info</p>
-
-			</div>
-		</div>
-
-		
+            <div class="col-6 col-md-4">
+                <p>Song 6</p>
+            </div>
+        </div>
+    
 
 		<div class="row" id="colThree">
 	

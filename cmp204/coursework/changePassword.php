@@ -15,7 +15,12 @@
         die("Fill in both feilds to change your password");
         }
 
-        session_start();
+        if(isset($_COOKIE["PHPSESSID"])) {
+            session_start();
+        }
+
+        $secure_password = trim(htmlspecialchars($_POST['password']));
+        $secure_newpassword = trim(htmlspecialchars($_POST['newpassword']));
 
         if ($stmt = $enterMatrix->prepare('SELECT Username, Password FROM Account_Info WHERE Username = ?')) {
             $stmt->bind_param('s', $_SESSION['username']);
@@ -27,28 +32,28 @@
                 $stmt->bind_result($Username, $Password);
                 $stmt->fetch();
               
-                $password = $_POST["password"];
+                $password = $secure_password;
                 if(password_verify($password, $Password)) 
                 {
                    
                     if($newpassword = $enterMatrix->prepare('UPDATE Account_Info SET Password  =? WHERE Username =?')){
-                        $hashToStoreInDb = password_hash($_POST['newpassword'], PASSWORD_DEFAULT);
+                        $hashToStoreInDb = password_hash($secure_newpassword, PASSWORD_DEFAULT);
                         $newpassword->bind_param('ss', $hashToStoreInDb, $_SESSION['username']);
                         $newpassword->execute();
                         $newpassword->store_result();
                         header("Location: userProfile.php", true, 301);
                     
-                    }else { echo 'password did not reset';}
+                    }else { die("password did not reset");}
 
 
                 } else {
                     // Incorrect password
-                    echo 'Incorrect username and/or password!';
+                    die('Incorrect username and/or password!');
                 }
 
             } else {
                 // Incorrect username
-                echo 'Incorrect username and/or password!';
+                die('Incorrect username and/or password!');
             }
     
     

@@ -10,11 +10,15 @@
 
     }else{
 
-        if ( !isset($_POST['username'], $_POST['password']) ) {
-        die("Fill in both feilds NOW");}
+        if ( !isset($_POST['username'], $_POST['password'], $_POST['TandC']) ) {
+        die("All Feilds need to be filled in and the term and conditions need to be accepted to create an account with us");}
+
+
+        $secure_user = stripslashes(htmlspecialchars(trim($_POST['username'])));
+        $secure_password = trim(htmlspecialchars($_POST['password']));
 
         $stmt = $enterMatrix->prepare('SELECT Username FROM Account_Info WHERE Username = ?');
-        $stmt->bind_param("s", $_POST["username"]);
+        $stmt->bind_param("s", $secure_user);
         $stmt->execute();
 
         $stmt_result = $stmt->get_result();
@@ -25,13 +29,14 @@
 
             $stmt_insert = $enterMatrix->prepare("INSERT INTO Account_Info(Username, Password) VALUES (?, ?)");
 
-            $hashToStoreInDb = password_hash($_POST['password'], PASSWORD_DEFAULT);
-            $stmt_insert->bind_param("ss", $_POST["username"], $hashToStoreInDb);
+            $hashToStoreInDb = password_hash($secure_password, PASSWORD_DEFAULT);
+            $stmt_insert->bind_param("ss", $secure_user, $hashToStoreInDb);
             $stmt_insert->execute();
 
             session_start();
             //header("location userProfile.php");
-            $_SESSION["username"] = $_POST["username"];
+            $_SESSION["username"] = $secure_user;
+            setcookie("PHPSESSID", $_SESSION, time(+3200));  /* expire in 1 hour */
             header("Location: userProfile.php", true, 301);
         
 

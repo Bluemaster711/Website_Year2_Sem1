@@ -11,11 +11,17 @@
 
     }else{
 
-        if ( !isset($_POST['username'], $_POST['password']) ) {
-	    die("Fill in both feilds NOW");}
+        if ( !isset($_POST['password'], $_POST['confirm']) ) {
+	    die("Fill in all feilds please");}
+        
 
-        $secure_user = stripslashes(htmlspecialchars(trim($_POST['username'])));
+        if(isset($_COOKIE["PHPSESSID"])) {
+	        session_start();
+        }
+
+        $secure_user = $_SESSION['username'];
         $secure_password = trim(htmlspecialchars($_POST['password']));
+
 
         if ($stmt = $enterMatrix->prepare('SELECT Username, Password FROM Account_Info WHERE Username = ?')) {
     	$stmt->bind_param('s', $secure_user);
@@ -31,15 +37,15 @@
 
             $password = $secure_password;
             if(password_verify($password, $Password)) 
-
             {
-               
-                session_start();
-                //header("location userProfile.php");
-                $_SESSION["username"] = $secure_user;
-                setcookie("PHPSESSID", $_SESSION, time()+3200);  /* expire in 1 hour */
-                header("Location: userProfile.php", true, 301);
-                //echo $_SESSION['username'];
+                $stmt = $enterMatrix->prepare("DELETE FROM Account_Info WHERE Username=?");
+                $stmt->bind_param("s", $_SESSION["username"]);
+                $stmt->execute();
+            
+                //$_SESSION = array();
+                session_destroy();
+                setcookie("PHPSESSID", time()+60);  /* expire in 1 minute */
+                header('Location: index.php');
     
             } else {
                 // Incorrect password
