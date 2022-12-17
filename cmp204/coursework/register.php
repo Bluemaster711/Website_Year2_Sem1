@@ -71,7 +71,7 @@
 
                         <input type="checkbox" id="TandC" name="TandC" value="TandC">
                         <label for="TandC"> I accept the T's and C's</label>
-                        <p>click <a href="TandC.php">HERE</a> to see our term and conditions</p><br>  
+                        <br>
                         
                         <input type="submit" value="register" id="submitColour">
 
@@ -99,13 +99,11 @@
 
         <div class="col-6">
 
-            <p>info</p>
+        <p>This page was created for educational purposes</p>
 
         </div>
 
         <div class="col-6">
-
-            <p>info</p>
 
         </div>
 
@@ -126,8 +124,8 @@
 </div>
 
 <footer>
+<P>This website uses cookies for registered users. Click <a href="TandC.php">HERE</a> to see our term and conditions</P>
 </footer>
-
 </body>
 
 </html>

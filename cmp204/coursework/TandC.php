@@ -28,7 +28,7 @@
 
 			</div>
 			<div class="col-6 col-md-4">
-                <p>image / privacy seal</p>
+                <img src="images/seal.png" alt=”privacy_photo” class="logo">
 			</div>
 		</div>
 		<div class="row" id="colTwo">
@@ -94,6 +94,10 @@
 		</div>
 	</div>
 </body>
+
+<footer>
+<P>This website uses cookies for registered users. Click <a href="TandC.php">HERE</a> to see our term and conditions</P>
+</footer>
 
 </html>
 </body>

@@ -40,62 +40,66 @@
 			<div class="col-6 col-md-4">
 
 				<div class="well">
-				<p><a href="#">Link</a></p>
+				<p><a href="https://www.deezer.com/en/artist/1352097">Deezer</a></p>
 				</div>
 
 				<div class="well">
-					<p><a href="#">Link</a></p>
+					<p><a href="https://open.spotify.com/artist/7EQ0qTo7fWT7DPxmxtSYEc">spotify</a></p>
 				</div>
 
 				<div class="well">
-					<p><a href="#">Link</a></p>
+					<p><a href="https://www.youtube.com/@BastilleVEVO">Bastile Youtube</a></p>
 				</div>
 
 			</div>
 		</div>
 
 		<div class="row" id="colTwo">
-            <div class="col-6 col-md-4">
-                <p>Song 1</p>
-            </div>
-    
-            <div class="col-6 col-md-4">
-                <p>Song 2</p>
-            </div>
-
-            <div class="col-6 col-md-4">
-                <p>Song 3</p>
-            </div>
+            <div class="col-md-12">
+             
+				<p id=lyrics>Song</p>
+				
+			</div>
         </div>
-        <div class="row" id="colTwo">
-            <div class="col-6 col-md-4">
-                <p>Song 4</p>
-            </div>
-    
-            <div class="col-6 col-md-4">
-                <p>Song 5</p>
-            </div>
 
-            <div class="col-6 col-md-4">
-                <p>Song 6</p>
-            </div>
+
+        <div class="row" id="colThree">
+            
+			<div class="col-6">
+
+				<button id=playlyrics>Play Song</button>
+
+			</div>
+
+			<div class="col-6">
+
+				
+
+			</div>
+
         </div>
     
 
-		<div class="row" id="colThree">
+		<div class="row" id="colthreeimage">
 	
 
-			<div class="col-6">
+		
+			<div class="col-6" id ="div_img">
 
-				<p>info</p>
+				<p id = "imagelocation">
+
+				</p>
+			</div>
+
+			<div class="col-6" id="div_img2">
+
+				<p id = "imagelocation2">
+
+				</p>
+
 
 			</div>
 
-			<div class="col-6">
-
-				<p>info</p>
-
-			</div>
 
 		</div>
 
@@ -116,6 +120,7 @@
 
 
 <footer>
+<P>This website uses cookies for registered users. Click <a href="TandC.php">HERE</a> to see our term and conditions</P>
 </footer>
   
 </body>

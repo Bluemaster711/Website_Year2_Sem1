@@ -34,24 +34,24 @@
 			<div class="col-12 col-md-8">
 
 				<h1>Bastile</h1>
+				<p>Bastille but with one L</p>
 
 				<div id="div_greet"></div>
-				<p>Para</p>
 
 			</div>
 
 			<div class="col-6 col-md-4">
 
 				<div class="well">
-					<p><a href="#">Link</a></p>
+					<p><a href="https://twitter.com/bastilledan?lang=en">Dan Smith Twiter</a></p>
 				</div>
 
 				<div class="well">
-					<p><a href="#">Link</a></p>
+					<p><a href="https://en-gb.facebook.com/bastilleuk/">Bastile facebook</a></p>
 				</div>
 
 				<div class="well">
-					<p><a href="#">Link</a></p>
+					<p><a href="https://en.wikipedia.org/wiki/Bastille_(band)">Main source of infomration....</a></p>
 				</div>
 
 			</div>
@@ -60,21 +60,20 @@
 
 		<div class="row" id="colTwo">
 			<div class="col-6 col-md-4">
-
-				<p>info</p>
-
+				<h3>Band members</h3>
+				<p>Dan Smith</p>
+				<p>Kyle Simmons</p>
+				<p>Will Farquarson</p>
+				<p>Chris Woody</p>
+			</div>			
+			<div class="col-6 col-md-4">		
+				<h3>Instrument</h3>
+				<p>Vocalist</p>
+				<p>Keyboardist</p>
+				<p>Bassost and Guitarist</p>
+				<p>Drummer</p>	
 			</div>
-			
 			<div class="col-6 col-md-4">
-
-				<p>info</p>
-			
-			</div>
-
-			<div class="col-6 col-md-4">
-
-				<p>info</p>
-
 			</div>
 		</div>
 
@@ -85,13 +84,12 @@
 
 			<div class="col-6">
 
-				<p>info</p>
+			<p>This page was created for educational purposes</p>
 
 			</div>
 
 			<div class="col-6">
 
-				<p>info</p>
 
 			</div>
 
@@ -114,6 +112,7 @@
 </body>
 
 <footer>
+<P>This website uses cookies for registered users. Click <a href="TandC.php">HERE</a> to see our term and conditions</P>
 </footer>
 
 

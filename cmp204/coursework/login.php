@@ -37,9 +37,10 @@
         <div class="col-12 col-md-8">
 
             <h1>Bastile</h1>
+            <p>Welcome Back</p>
+            <br>
 
             <div id="div_greet"></div>
-            <p>Para</p>
 
         </div>
 
@@ -76,6 +77,7 @@
                     <input type="submit" value="login" id="submitColour">
 
                 </form>
+
             </div>
 
         </div>
@@ -96,13 +98,13 @@
 
         <div class="col-6">
 
-            <p>info</p>
+        <p>This page was created for educational purposes</p>
 
         </div>
 
         <div class="col-6">
 
-            <p>info</p>
+    
 
         </div>
 
@@ -123,6 +125,7 @@
 </div>
 
 <footer>
+<P>This website uses cookies for registered users. Click <a href="TandC.php">HERE</a> to see our term and conditions</P>
 </footer>
 
 </body>

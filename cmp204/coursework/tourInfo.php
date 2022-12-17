@@ -32,9 +32,10 @@
 			<div class="col-12 col-md-8">
 
 				<h1>Tour Information</h1>
+				<p>Your past tours and facts about bastile</p>
+				<br>
 
 				<div id="div_greet"></div>
-                <p>Details of tour's</p>
 
 			</div>
 
@@ -46,26 +47,22 @@
 
 		<div class="row" id="colTwo">
 
-			<div class="col-12 col-md-8">
-				<p>Past Tours</p>
+			<div class="col-md-12">
+				<h1>Past Tours</h1>
 			</div>
 
-			<div class="col-6 col-md-4">
-			</div>
 		</div>
 
-		<div class="row" id="colTwo">
-            <div class="col-6 col-md-4">
-                <p>tour</p>
+		<div class="row" id="colTwoo">
+            <div class="col-md-12">
+                
+
+				<div class = "sga" ><p class = "sga" ><?php include "selectGigsAttended.php"?></p></div>
+			
+				
             </div>
     
-            <div class="col-6 col-md-4">
-                <p>tour</p>
-            </div>
-
-            <div class="col-6 col-md-4">
-                <p>tour</p>
-            </div>
+        
         </div>
 		
 		<div class="row" id="colThree">
@@ -73,7 +70,7 @@
 
 			<div class="col-6">
 
-				<button id=randbutton>Randomize</button>
+				<button onclick=randpara() id=randbutton>Randomize</button>
 
 			</div>
 
@@ -97,8 +94,8 @@
 
 	</div>
 
-
 <footer>
+<P>This website uses cookies for registered users. Click <a href="TandC.php">HERE</a> to see our term and conditions</P>
 </footer>
 
 </body>

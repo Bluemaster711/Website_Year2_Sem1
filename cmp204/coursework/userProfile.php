@@ -33,22 +33,22 @@
                 <h1>User Profile</h1>
                 <div id="div_greet"></div>
             
-                <p>Welcome <?php if(isset($_SESSION["username"])) { echo $_SESSION["username"]; } else { echo "your stupid"; } ?></p>
+                <p>Welcome <?php if(isset($_SESSION["username"])) { echo $_SESSION["username"]; } else { echo "hello unauthorized user"; } ?></p>
 
             </div>
 
             <div class="col-6 col-md-4">
 
                 <div class="well">
-                    <p><a href="#">Link</a></p>
+                    <p><a href="https://www.allmusic.com/artist/bastille-mn0002825814/biography">Bastile Information</a></p>
                 </div>
 
                 <div class="well">
-                    <p><a href="#">Link</a></p>
+                    <p><a href="https://open.spotify.com/artist/7EQ0qTo7fWT7DPxmxtSYEc">spotify</a></p>
                 </div>
 
                 <div class="well">
-                    <p><a href="#">Link</a></p>
+                    <p><a href="https://en-gb.facebook.com/bastilleuk/">Bastile facebook</a></p>
                 </div>
 
             </div>
@@ -60,14 +60,14 @@
 
             <div class="col-12 col-md-8">
 
-                <h1>Your Tours</h1>
+                <h1>Your Tours / Gigs --->></h1>
 
             </div>
 
             <div class="col-6 col-md-4">
 
-                <form action="editGigs.php">
-                    <button>Edit Your Gig's</button>
+                <form action="editgigs.php">
+                    <button>Edit Your Tours / Gigs</button>
                 </form>
 
             </div>
@@ -75,17 +75,15 @@
         </div>
 
         <div class="row" id="colTwoo">
-            <div class="col-6 col-md-4">
-                <p>photo</p>
-            </div>
+            <div class="col-md-12">
+                
 
-            <div class="col-6 col-md-4">
-                <p>photo</p>
+				<div class = "sga" ><p class = "sga" ><?php include "selectGigsAttended.php"?></p></div>
+			
+				
             </div>
-
-            <div class="col-6 col-md-4">
-                <p>photo</p>
-            </div>
+    
+        
         </div>
 
 
@@ -115,6 +113,7 @@
     </div>
 
 <footer>
+<P>This website uses cookies for registered users. Click <a href="TandC.php">HERE</a> to see our term and conditions</P>
 </footer>
 
 </body>

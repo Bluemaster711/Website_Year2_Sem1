@@ -2,28 +2,54 @@
 {
     background-color:black;
     text-align: left;
-    color: white;
 }
-#colOne p{color: #2272FF;}
+#colOne p{
+    color: skyblue;
+    text-align: center;
+    padding-bottom: 15px;
+}
 #colOne h1
 {
-    color: #2272FF;
+    color: skyblue;
+    text-align: center;
+    margin-top: 10%;
     font-family: "Lucida Console", Monaco, monospace;
 }
-#colTwo{background-color:rgb(0, 153, 255);}
-#colTwoo{background-color:rgb(0, 153, 255);}
+#colTwo
+{
+    background-color:skyblue;
+    text-align: center;
+}
+#colTwo p
+{
+    text-align: center;
+}
+#colTwoo
+{
+    background-color:skyblue;
+    text-align: center;
+}
 
 #colThree{background-color:black;}
-#colThree p{color: #2272FF;}
+#colThree p{color: skyblue;}
+
+#colthreeimage{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+#colthreeimage img{
+    float: left;
+    padding: 15px;
+}
 
 #navtext{
-        color: #2272FF;
+        color: skyblue;
 }
-
 #flip a{
-    color: blue;
+    color: skyblue;
 }
-
 #flip {
     padding: 10px;
     margin: 5px;
@@ -33,44 +59,46 @@
     margin-bottom: 0;
     border-radius: 0;
 }
-    
 #panel{
     width: 100%;
     text-align: center;
     display: none;
     position: center;
     z-index: 100;
-    color: #2272FF;
-    
+    color: skyblue;
 }
-
+#panel a 
+{
+    color: skyblue;
+    display: block;
+    padding: 8px;
+    background-color: black;
+}
 body {
-    background-color: darkgray;
+    background-image: url("background.jpg");
+    /* background-color: lightgray; */
+    width: 100%;
+    max-height: 100%;
+    overflow-x:hidden; overflow-y: scroll; padding-bottom:10px;
 }
-
-.register .login{
-    background-color: rgb(149, 215, 241);
-    position: center;
-    text-align: center;
-}
-
 #h1-black{
     color: black;
     text-align: center;
     font-family: "Lucida Console", Monaco, monospace;
 }
-
-B{
-    color: red;
-}
-
 input{
     padding: 5px;
     margin: 5px;
-
+    max-width: 75%;
 }
-button{
-    color: blue;
+#colTwo button{
+    background-color: black;
+    color: skyblue;
+    padding: 5px;
+    margin: 5px;
+}
+#colThree button{
+    background-color: skyblue;
     padding: 5px;
     margin: 5px;
 }
@@ -84,85 +112,89 @@ button{
 }
 h1, h2, h3  
 {
-    color: aliceblue;
+    color: black;
     position: left;
     font-family: "Lucida Console", Monaco, monospace;
 }
-
 .logo{
-    height: 75%;
-    max-width: 75%;
-    padding-top: 25px;
+    height: 100%;
+    max-width: 100%;
+    padding: 0px;
+    margin: 0px;
 }
+
+
 .bluetxt{
-    color: blue;
-
+    color: skyblue;
 }
-
-
-
 p	
 {
         color: black;
         position: left;
         margin: 10px;
 }
- ul 
- {
+#lyrics
+{
+    font-size: 24px;
+}
+ul 
+{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden; 
 }
-#panel a 
-{
-    color: #2272FF;
-    display: block;
-    padding: 8px;
-    background-color: darkgray;
-}
-.register a{
-    color: black;
-    display: flexbox;
-    padding: 0px;
-    background-color: darkgray;
+.well{
+    border: 2px;
+    border-color: skyblue;
 }
 .well a {
-    color: #2272FF;
+    color: skyblue;
     display: block;
-    padding: 8px;
-    background-color: darkgray;
+    padding: 0px;
+    background-color: black;
 }
-
-
-
-
-
-.sidenav 
-{
-        background-color: #f1f1f1;
-        height: 25%;
-}
-
-
 .row{
     padding: 0px;
     margin: 5px;
 }
+footer p{
+    background-color: black;
+    color: white;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    bottom: 0px;
+    margin: 0px;
+}
+#extraInfo{
+    background-color: skyblue;
+    text-align: center;
+}
+#div_img.col6{
+    max-width: 50%;
+    max-height: 50%;
+}
+#div_img2.col6{
+    max-width: 50%;
+    max-height: 50%;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
 
-
-
-
-
+.sga {
+    font-size: 24px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
 
 @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-
-      .row.content {height:auto;} 
+ 
     }
+
+
 
 
 
