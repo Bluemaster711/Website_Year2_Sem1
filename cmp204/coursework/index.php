@@ -109,11 +109,10 @@
 
 	</div>
 
-</body>
 
 <footer>
 <P>This website uses cookies for registered users. Click <a href="TandC.php">HERE</a> to see our term and conditions</P>
 </footer>
-
+</body>
 
 </html>

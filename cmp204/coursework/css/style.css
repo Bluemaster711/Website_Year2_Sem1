@@ -63,7 +63,6 @@
     width: 100%;
     text-align: center;
     display: none;
-    position: center;
     z-index: 100;
     color: skyblue;
 }
@@ -106,14 +105,12 @@ input{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .form-center{
-    position: center;
     text-align: center;
     padding: 5px;
 }
 h1, h2, h3  
 {
     color: black;
-    position: left;
     font-family: "Lucida Console", Monaco, monospace;
 }
 .logo{
@@ -130,7 +127,6 @@ h1, h2, h3
 p	
 {
         color: black;
-        position: left;
         margin: 10px;
 }
 #lyrics
@@ -144,10 +140,8 @@ ul
     padding: 0;
     overflow: hidden; 
 }
-.well{
-    border: 2px;
-    border-color: skyblue;
-}
+
+
 .well a {
     color: skyblue;
     display: block;
