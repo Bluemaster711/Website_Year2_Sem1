@@ -1,9 +1,9 @@
 <?php
 
-$servername = "lochnagar.abertay.ac.uk";
-$dbusername = "sql2203162";
-$dbpassword = "D8EP4e95ukDq";
-$dbname = "sql2203162";
+$servername = "";
+$dbusername = "";
+$dbpassword = "";
+$dbname = "";
 
 
 $enterMatrix = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
